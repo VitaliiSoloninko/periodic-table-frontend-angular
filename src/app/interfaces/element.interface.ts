@@ -3,7 +3,7 @@ import { Group } from './group.interface';
 import { Period } from './period.interface';
 import { State } from './state.interface';
 
-export interface Element {
+export interface ChemicalElement {
   id: number;
   atomic_number: number;
   symbol: string;

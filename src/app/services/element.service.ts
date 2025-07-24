@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ChemicalElement } from '../interfaces';
 import { ELEMENTS_URL } from '../urls';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { ELEMENTS_URL } from '../urls';
 export class ElementService {
   constructor(private http: HttpClient) {}
 
-  getAllElements(): Observable<Element[]> {
-    return this.http.get<Element[]>(ELEMENTS_URL);
+  getAllElements(): Observable<ChemicalElement[]> {
+    return this.http.get<ChemicalElement[]>(ELEMENTS_URL);
   }
 }

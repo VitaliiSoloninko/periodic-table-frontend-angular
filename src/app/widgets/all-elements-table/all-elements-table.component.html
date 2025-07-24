@@ -1,1 +1,60 @@
-<pre>{{ elements | json }}</pre>
+<div class="flex">
+  @if (elements.length > 0) {
+  <table
+    class="mx-auto mt-1 table-fixed border-separate border-spacing-4 text-left"
+  >
+    <thead>
+      <tr class="text-gray-800">
+        <th class="text-center">N</th>
+        <th class="text-center">Symbol</th>
+        <th class="text-center">Name</th>
+        <th class="text-center">Ordnungszahl</th>
+        <th class="text-center">Masse</th>
+        <th class="text-center">Zustand</th>
+        <th class="text-center">Kategorie</th>
+        <th class="text-center">Gruppe</th>
+        <th class="text-center">Periode</th>
+        <th class="text-center">Dichte</th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-600">
+      @for (element of elements; track $index) {
+      <tr>
+        <td class="text-center border-b border-dashed border-gray-400">
+          {{ $index + 1 }}
+        </td>
+        <td
+          class="text-center border-b border-dashed border-gray-400 font-bold text-green-500"
+        >
+          {{ element.symbol }}
+        </td>
+        <td class="border-b border-dashed border-gray-400 w-20 font-bold">
+          {{ element.name }}
+        </td>
+        <td class="text-center border-b border-dashed border-gray-400">
+          {{ element.atomic_number }}
+        </td>
+        <td class="text-center border-b border-dashed border-gray-400">
+          {{ element.atomic_mass }}
+        </td>
+        <td class="text-center border-b border-dashed border-gray-400">
+          {{ element.state.name }}
+        </td>
+        <td class="text-center border-b border-dashed border-gray-400">
+          {{ element.category.name }}
+        </td>
+        <td class="text-center border-b border-dashed border-gray-400">
+          {{ element.group.number }}
+        </td>
+        <td class="text-center border-b border-dashed border-gray-400">
+          {{ element.period.number }}
+        </td>
+        <td class="text-center border-b border-dashed border-gray-400">
+          {{ element.density }}
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  }
+</div>
