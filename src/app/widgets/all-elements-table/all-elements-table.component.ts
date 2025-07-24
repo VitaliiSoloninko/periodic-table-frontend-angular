@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ElementService } from '../../services/element.service';
+import { Router } from '@angular/router';
 import { ChemicalElement } from '../../interfaces';
+import { ElementService } from '../../services/element.service';
 
 @Component({
   selector: 'app-all-elements-table',
@@ -11,12 +12,16 @@ import { ChemicalElement } from '../../interfaces';
 export class AllElementsTableComponent {
   elements: ChemicalElement[] = [];
 
-  constructor(private elementService: ElementService) {}
+  constructor(private router: Router, private elementService: ElementService) {}
 
   ngOnInit(): void {
     this.elementService.getAllElements().subscribe((val) => {
       this.elements = val;
       console.log(this.elements);
     });
+  }
+
+  openElement(elementId: number): void {
+    this.router.navigate(['/element', elementId]);
   }
 }

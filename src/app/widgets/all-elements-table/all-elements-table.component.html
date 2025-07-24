@@ -14,6 +14,7 @@
         <th class="text-center">Dichte</th>
         <th class="text-center">Gruppe</th>
         <th class="text-center">Periode</th>
+        <th class="text-center">Aktion</th>
       </tr>
     </thead>
     <tbody class="text-gray-600">
@@ -23,7 +24,7 @@
           {{ element.atomic_number }}
         </td>
         <td
-          class="text-center border-b border-dashed border-gray-400 font-bold text-green-500"
+          class="text-center border-b border-dashed border-gray-400 font-bold text-green-600"
         >
           {{ element.symbol }}
         </td>
@@ -53,7 +54,7 @@
           <button
             type="button"
             (click)="openElement(element.id)"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm"
+            class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-3 rounded text-sm"
           >
             Öffnen
           </button>
