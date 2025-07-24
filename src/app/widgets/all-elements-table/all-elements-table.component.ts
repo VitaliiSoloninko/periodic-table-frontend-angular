@@ -9,7 +9,7 @@ import { ElementService } from '../../services/element.service';
   styleUrl: './all-elements-table.component.css',
 })
 export class AllElementsTableComponent {
-  elements: any[] = [];
+  elements: Element[] = [];
 
   constructor(private elementService: ElementService) {}
 
