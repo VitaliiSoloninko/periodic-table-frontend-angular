@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TextInputComponent } from './text-input.component';
+import { ElementCartListComponent } from './element-cart-list.component';
 
-describe('TextInputComponent', () => {
-  let component: TextInputComponent;
-  let fixture: ComponentFixture<TextInputComponent>;
+describe('ElementCartListComponent', () => {
+  let component: ElementCartListComponent;
+  let fixture: ComponentFixture<ElementCartListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TextInputComponent]
+      imports: [ElementCartListComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TextInputComponent);
+    fixture = TestBed.createComponent(ElementCartListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

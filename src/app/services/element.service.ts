@@ -9,6 +9,8 @@ import { ELEMENTS_URL } from '../urls';
 })
 export class ElementService {
   constructor(private http: HttpClient) {}
+  private apiUrl =
+    'https://periodic-table-backend-nestjs-postgresql-production.up.railway.app';
 
   getAllElements(): Observable<ChemicalElement[]> {
     return this.http.get<ChemicalElement[]>(ELEMENTS_URL);
@@ -16,5 +18,17 @@ export class ElementService {
 
   getElementById(id: number): Observable<ChemicalElement> {
     return this.http.get<ChemicalElement>(`${ELEMENTS_URL}/${id}`);
+  }
+
+  searchByName(name: string): Observable<ChemicalElement[]> {
+    return this.http.get<ChemicalElement[]>(
+      `${this.apiUrl}/elements-search/name?q=${name}`
+    );
+  }
+
+  searchBySymbol(symbol: string): Observable<ChemicalElement[]> {
+    return this.http.get<ChemicalElement[]>(
+      `${this.apiUrl}/elements-search/symbol?symbol=${symbol}`
+    );
   }
 }
