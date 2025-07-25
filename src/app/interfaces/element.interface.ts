@@ -17,12 +17,8 @@ export interface ChemicalElement {
   oxidation_states: string;
   createdAt: string;
   updatedAt: string;
-  state_id: number;
-  category_id: number;
-  group_id: number;
-  period_id: number;
   state: State;
   category: Category;
-  group: Group;
+  group: Group | null;
   period: Period;
 }
