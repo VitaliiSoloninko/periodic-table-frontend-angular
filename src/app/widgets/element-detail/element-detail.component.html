@@ -1,0 +1,14 @@
+@if (isLoading) {
+<div class="text-center py-12">
+  <div class="text-xl text-gray-600">Laden...</div>
+</div>
+} @if (error && !isLoading) {
+<div class="text-center py-12">
+  <div class="text-xl text-red-600">{{ error }}</div>
+</div>
+} @if (element && !isLoading) {
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+  <app-element-card [element]="element"></app-element-card>
+  <app-element-properties [element]="element"></app-element-properties>
+</div>
+}

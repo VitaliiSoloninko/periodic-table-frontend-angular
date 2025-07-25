@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ChemicalElement } from '../../interfaces';
 import { ElementService } from '../../services/element.service';
 
 @Component({
   selector: 'app-all-elements-table',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './all-elements-table.component.html',
   styleUrl: './all-elements-table.component.css',
 })

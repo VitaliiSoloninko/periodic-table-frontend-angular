@@ -51,13 +51,12 @@
           {{ element.period.number }}
         </td>
         <td class="text-center border-b border-dashed border-gray-400">
-          <button
-            type="button"
-            (click)="openElement(element.id)"
-            class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-3 rounded text-sm"
+          <a
+            [routerLink]="['/element', element.id]"
+            class="bg-green-600 hover:bg-green-700 text-white font-bold py-0.5 px-3 rounded text-sm inline-block text-center no-underline transition duration-200 hover:shadow-md"
           >
             Öffnen
-          </button>
+          </a>
         </td>
       </tr>
       }
