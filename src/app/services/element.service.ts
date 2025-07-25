@@ -13,4 +13,8 @@ export class ElementService {
   getAllElements(): Observable<ChemicalElement[]> {
     return this.http.get<ChemicalElement[]>(ELEMENTS_URL);
   }
+
+  getElementById(id: number): Observable<ChemicalElement> {
+    return this.http.get<ChemicalElement>(`${ELEMENTS_URL}/${id}`);
+  }
 }

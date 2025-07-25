@@ -1,0 +1,35 @@
+<div class="lg:col-span-2">
+  <div class="bg-white rounded-xl shadow-lg p-6">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">Eigenschaften</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="space-y-3">
+        <app-row label="Ordnungszahl" [value]="element?.atomic_number" />
+        <app-row label="Atommasse" [value]="element?.atomic_mass" />
+        <app-row label="Zustand" [value]="element?.state?.name" />
+        <app-row label="Kategorie" [value]="element?.category?.name" />
+        <app-row label="Gruppe" [value]="element?.group?.number" />
+        <app-row label="Periode" [value]="element?.period?.number" />
+      </div>
+      <div class="space-y-3">
+        <app-row label="Dichte" [value]="element?.density" unit="g/cm³" />
+        <app-row
+          label="Siedepunkt"
+          [value]="element?.boiling_point"
+          unit="°C"
+        />
+        <app-row
+          label="Schmelzpunkt"
+          [value]="element?.melting_point"
+          unit="°C"
+        />
+        <app-row
+          label="Elektronegativität"
+          [value]="element?.electronegativity"
+        />
+        <app-row label="Oxidationsstufen" [value]="element?.oxidation_states" />
+        <app-row label="Entdeckt" [value]="element?.discovered_by" />
+      </div>
+    </div>
+  </div>
+</div>

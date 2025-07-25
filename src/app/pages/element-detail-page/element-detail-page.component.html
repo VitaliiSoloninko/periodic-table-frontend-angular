@@ -1,1 +1,14 @@
-<p>element-detail-page works!</p>
+<div class="container mx-auto p-6 max-w-6xl">
+  <div class="mt-8">
+    <app-back-button text="Zurück zur Elements"></app-back-button>
+  </div>
+
+  <div class="text-center my-4">
+    <app-title colorTitle="Element" title=" Details"> </app-title>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+    <app-element-card [element]="element"></app-element-card>
+    <app-element-properties [element]="element"></app-element-properties>
+  </div>
+</div>
