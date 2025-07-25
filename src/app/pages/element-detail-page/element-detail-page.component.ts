@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BackButtonComponent } from '../../shared/back-button/back-button.component';
+import { BackButtonComponent } from '../../features/back-button/back-button.component';
 import { TitleComponent } from '../../shared/title/title.component';
 import { ElementDetailComponent } from '../../widgets/element-detail/element-detail.component';
 
