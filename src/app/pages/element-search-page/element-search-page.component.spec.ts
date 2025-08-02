@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { commonTestImports, commonTestProviders } from '../../../testing/test-helpers';
 import { ElementSearchPageComponent } from './element-search-page.component';
 
 describe('ElementSearchPageComponent', () => {
@@ -8,7 +8,8 @@ describe('ElementSearchPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ElementSearchPageComponent]
+      imports: [ElementSearchPageComponent, ...commonTestImports],
+      providers: [...commonTestProviders]
     })
     .compileComponents();
 

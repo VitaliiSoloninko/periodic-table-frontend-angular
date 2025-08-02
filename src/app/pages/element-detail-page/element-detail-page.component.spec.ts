@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { commonTestImports, commonTestProviders } from '../../../testing/test-helpers';
 import { ElementDetailPageComponent } from './element-detail-page.component';
 
 describe('ElementDetailPageComponent', () => {
@@ -8,7 +8,8 @@ describe('ElementDetailPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ElementDetailPageComponent]
+      imports: [ElementDetailPageComponent, ...commonTestImports],
+      providers: [...commonTestProviders]
     })
     .compileComponents();
 

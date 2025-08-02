@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { commonTestImports, commonTestProviders } from '../../../testing/test-helpers';
 import { ElementDetailComponent } from './element-detail.component';
 
 describe('ElementDetailComponent', () => {
@@ -8,7 +8,8 @@ describe('ElementDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ElementDetailComponent]
+      imports: [ElementDetailComponent, ...commonTestImports],
+      providers: [...commonTestProviders]
     })
     .compileComponents();
 

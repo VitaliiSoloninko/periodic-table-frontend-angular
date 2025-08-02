@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { commonTestImports, commonTestProviders } from '../../../testing/test-helpers';
 import { ForwardButtonComponent } from './forward-button.component';
 
 describe('ForwardButtonComponent', () => {
@@ -8,7 +8,8 @@ describe('ForwardButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ForwardButtonComponent]
+      imports: [ForwardButtonComponent, ...commonTestImports],
+      providers: [...commonTestProviders]
     })
     .compileComponents();
 

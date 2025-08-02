@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { commonTestImports, commonTestProviders } from '../../../testing/test-helpers';
 import { ElementsPageComponent } from './elements-page.component';
 
 describe('ElementsPageComponent', () => {
@@ -8,7 +8,8 @@ describe('ElementsPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ElementsPageComponent]
+      imports: [ElementsPageComponent, ...commonTestImports],
+      providers: [...commonTestProviders]
     })
     .compileComponents();
 

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { commonTestImports, commonTestProviders } from '../../../testing/test-helpers';
 import { NavLinkComponent } from './nav-link.component';
 
 describe('NavLinkComponent', () => {
@@ -8,7 +8,8 @@ describe('NavLinkComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavLinkComponent]
+      imports: [NavLinkComponent, ...commonTestImports],
+      providers: [...commonTestProviders]
     })
     .compileComponents();
 

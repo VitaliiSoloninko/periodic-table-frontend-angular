@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { commonTestImports, commonTestProviders } from '../../../testing/test-helpers';
 import { AllElementsTableComponent } from './all-elements-table.component';
 
 describe('AllElementsTableComponent', () => {
@@ -8,7 +8,8 @@ describe('AllElementsTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AllElementsTableComponent]
+      imports: [AllElementsTableComponent, ...commonTestImports],
+      providers: [...commonTestProviders]
     })
     .compileComponents();
 
