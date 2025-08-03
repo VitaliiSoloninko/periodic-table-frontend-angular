@@ -1,0 +1,18 @@
+@if (isLoading) {
+<div class="mt-8 text-center">
+  <div class="text-gray-500">Suche läuft...</div>
+</div>
+} @else if (results.length > 0) {
+<div class="mt-8">
+  <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">
+    Gefundene Elemente
+  </h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    @for (element of results; track element.id) {
+    <app-element-card [element]="element"></app-element-card>
+    }
+  </div>
+</div>
+} @else {
+<div class="mt-8 text-center text-gray-500">Keine Elemente gefunden.</div>
+}
