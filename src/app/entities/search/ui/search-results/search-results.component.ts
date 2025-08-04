@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ChemicalElement } from '../../../../interfaces';
-import { ElementCardComponent } from '../../../element-card/element-card.component';
+import { ElementCardComponent } from '../../../element/ui/element-card/element-card.component';
 
 @Component({
   selector: 'app-search-results',

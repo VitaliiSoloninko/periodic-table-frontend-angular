@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { ChemicalElement } from '../../interfaces';
+import { ChemicalElement } from '../../../../interfaces';
 
 @Component({
   selector: 'app-elements-table',

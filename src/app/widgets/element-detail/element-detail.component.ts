@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ElementCardComponent } from '../../entities/element/ui/element-card/element-card.component';
+import { ElementPropertiesComponent } from '../../entities/element/ui/element-properties/element-properties.component';
 import { ChemicalElement } from '../../interfaces';
 import { ElementService } from '../../services/element.service';
-import { ElementCardComponent } from '../../entities/element-card/element-card.component';
-import { ElementPropertiesComponent } from '../../entities/element-properties/element-properties.component';
 
 @Component({
   selector: 'app-element-detail',
