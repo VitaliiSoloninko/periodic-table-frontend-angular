@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ChemicalElement } from '../interfaces';
+import { ChemicalElement } from '../entities/element/model';
 import { ELEMENT_SEARCH_URL, ELEMENTS_URL } from '../urls';
 
 @Injectable({

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ChemicalElement } from '../../../../interfaces';
+import { ChemicalElement } from '../../../element/model';
 import { ElementCardComponent } from '../../../element/ui/element-card/element-card.component';
 
 @Component({

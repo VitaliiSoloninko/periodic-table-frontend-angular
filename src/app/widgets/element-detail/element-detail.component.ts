@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ChemicalElement } from '../../entities/element/model';
 import { ElementCardComponent } from '../../entities/element/ui/element-card/element-card.component';
 import { ElementPropertiesComponent } from '../../entities/element/ui/element-properties/element-properties.component';
-import { ChemicalElement } from '../../interfaces';
 import { ElementService } from '../../services/element.service';
 
 @Component({

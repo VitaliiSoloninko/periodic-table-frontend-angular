@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ChemicalElement } from '../../entities/element/model';
 import { ElementsTableComponent } from '../../entities/element/ui/elements-table/elements-table.component';
-import { ChemicalElement } from '../../interfaces';
 import { ElementService } from '../../services/element.service';
 
 @Component({

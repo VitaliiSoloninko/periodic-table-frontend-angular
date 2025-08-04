@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ChemicalElement } from '../../../../interfaces';
+import { ChemicalElement } from '../../model';
 
 @Component({
   selector: 'app-elements-table',
