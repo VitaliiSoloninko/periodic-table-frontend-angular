@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { ElementsTableComponent } from '../../entities/elements-table/elements-table.component';
 import { ChemicalElement } from '../../interfaces';
+import { Router } from '@angular/router';
 import { ElementService } from '../../services/element.service';
+import { ElementsTableComponent } from '../../entities/elements-table/elements-table.component';
 
 @Component({
-  selector: 'app-all-elements-table',
+  selector: 'app-elements-table-widget',
   imports: [ElementsTableComponent],
-  templateUrl: './all-elements-table.component.html',
-  styleUrl: './all-elements-table.component.css',
+  templateUrl: './elements-table-widget.component.html',
+  styleUrl: './elements-table-widget.component.css',
 })
-export class AllElementsTableComponent {
+export class ElementsTableWidgetComponent {
   elements: ChemicalElement[] = [];
   isLoading = false;
 
