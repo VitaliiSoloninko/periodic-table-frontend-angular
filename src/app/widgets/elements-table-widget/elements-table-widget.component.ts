@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ElementService } from '../../entities/element/api/element.service';
 import { ChemicalElement } from '../../entities/element/model';
 import { ElementsTableComponent } from '../../entities/element/ui/elements-table/elements-table.component';
-import { ElementService } from '../../services/element.service';
 
 @Component({
   selector: 'app-elements-table-widget',

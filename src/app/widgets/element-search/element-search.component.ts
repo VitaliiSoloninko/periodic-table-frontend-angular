@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { debounceTime, distinctUntilChanged, Subject, takeUntil } from 'rxjs';
+import { ElementService } from '../../entities/element/api/element.service';
 import { ChemicalElement } from '../../entities/element/model';
-import { ElementService } from '../../services/element.service';
 
 import { SearchFormComponent } from '../../entities/search/ui/search-form/search-form.component';
 import { SearchResultsComponent } from '../../entities/search/ui/search-results/search-results.component';
