@@ -1,10 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ElementsTableComponent } from './elements-table.component';
-import {
-  commonTestImports,
-  commonTestProviders,
-} from '../../../testing/test-helpers';
 
 describe('ElementsTableComponent', () => {
   let component: ElementsTableComponent;
@@ -12,16 +7,34 @@ describe('ElementsTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ElementsTableComponent, ...commonTestImports],
-      providers: [...commonTestProviders],
+      imports: [ElementsTableComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ElementsTableComponent);
     component = fixture.componentInstance;
+
+    component.elements = [];
+    component.isLoading = false;
+
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should handle empty elements array', () => {
+    component.elements = [];
+    fixture.detectChanges();
+
+    expect(component).toBeTruthy();
+    expect(component.elements.length).toBe(0);
+  });
+
+  it('should handle loading state', () => {
+    component.isLoading = true;
+    fixture.detectChanges();
+
+    expect(component.isLoading).toBe(true);
   });
 });

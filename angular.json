@@ -89,6 +89,17 @@
             ],
             "scripts": []
           }
+        },
+        "e2e": {
+          "builder": "playwright-ng-schematics:playwright",
+          "options": {
+            "devServerTarget": "periodic-table-frontend-angular:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "periodic-table-frontend-angular:serve:production"
+            }
+          }
         }
       }
     }
